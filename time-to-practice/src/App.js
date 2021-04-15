@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import ErrorModal from "./components/UI/ErrorModal";
+import React, { Fragment, useState } from "react";
+
 import AddUser from "./components/Users/AddUser";
 import UsersList from "./components/Users/UsersList";
 
@@ -16,10 +16,10 @@ function App() {
   };
 
   return (
-    <div>
+    <Fragment>
       <AddUser onAddUser={addUserHandler} />
       {usersList.length !== 0 && <UsersList users={usersList} />}
-    </div>
+    </Fragment>
   );
 }
 
